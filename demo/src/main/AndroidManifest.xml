@@ -26,6 +26,8 @@
 
         <activity android:name=".activity.paydemo.PayDemoActivity"/>
 
+        <activity android:name=".activity.httpdemo.HttpDemoActivity"/>
+
         <!-- 微信支付 -->
         <activity
             android:name="rayco.androidlib.pay.weixin.WXPayCallbackActivity"

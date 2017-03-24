@@ -28,6 +28,13 @@
                 android:text="Pay Demo"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/btn_http_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Http Demo"
+                android:textAllCaps="false"/>
+
         </LinearLayout>
 
     </ScrollView>

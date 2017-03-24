@@ -8,11 +8,12 @@ import android.widget.Button;
 import rayco.androidlib.demo.R;
 import rayco.androidlib.demo.activity.AppBaseActivity;
 import rayco.androidlib.demo.activity.adapterdemo.AdapterDemoActivity;
+import rayco.androidlib.demo.activity.httpdemo.HttpDemoActivity;
 import rayco.androidlib.demo.activity.paydemo.PayDemoActivity;
 
 public class MainActivity extends AppBaseActivity {
 
-    private Button btnAdapterDemo, btnPayDemo;
+    private Button btnAdapterDemo, btnPayDemo, btnHttpDemo;
 
     @Override
     protected void initVariables() {}
@@ -34,6 +35,13 @@ public class MainActivity extends AppBaseActivity {
                 gotoPayDemo();
             }
         });
+        btnHttpDemo = (Button) findViewById(R.id.btn_http_demo);
+        btnHttpDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoHttpDemo();
+            }
+        });
     }
 
     @Override
@@ -48,6 +56,12 @@ public class MainActivity extends AppBaseActivity {
     private void gotoPayDemo() {
         Intent intent;
         intent = new Intent(this, PayDemoActivity.class);
+        startActivity(intent);
+    }
+
+    private void gotoHttpDemo() {
+        Intent intent;
+        intent = new Intent(this, HttpDemoActivity.class);
         startActivity(intent);
     }
 }
